@@ -34,19 +34,27 @@ body {
   height: 100%;
   background-color: var(--background-color);
 }
+
+
 .notification {
   position: absolute;
-  top: 0;
+  top: 10%;
   color: var(--text-color);
   left: -50%;
   right: -50%;
   margin: 0 auto;
-  height: 30px;
   z-index: 100;
   width: 300px;
   border-radius: 8px;
   padding: 20px;
   background-color: var(--button-default-color);
+  text-align: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; /* Add a transition effect for opacity */
+}
+
+.notification.show {
+  opacity: 1; /* Show the notification */
 }
 
 .overlay > .content {
