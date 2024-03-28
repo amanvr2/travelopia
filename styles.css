@@ -48,7 +48,6 @@ body {
   border-radius: 8px;
   padding: 20px;
   background-color: var(--button-default-color);
-  text-align: center;
   opacity: 0; 
   transition: opacity 0.3s ease-in-out; /* Add a transition effect for opacity */
 }

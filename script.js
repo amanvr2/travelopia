@@ -3,19 +3,21 @@ document.getElementById('alertBtn').addEventListener('click', function () {
   });
   
   function createNotification(message) {
-    var notification = document.createElement('div');
-    notification.classList.add('notification');
-    notification.textContent = message;
+    var div = document.createElement('div');
+    div.classList.add('notification');
+    div.textContent = message;
   
-    document.body.appendChild(notification);
+    document.body.appendChild(div);
   
     // Trigger reflow to apply initial opacity setting before adding the .show class
-    void notification.offsetWidth;
+    void div.offsetWidth;
   
-    notification.classList.add('show'); // Add the .show class to trigger the transition
+    div.classList.add('show'); // Add the .show class to trigger the transition
   
     setTimeout(function () {
-      notification.remove();
-    }, 4000);
+      div.remove();
+
+    }, 3000);
   }
   
+  module.exports = { createNotification };
