@@ -1,19 +1,19 @@
 /* root variables */
 :root {
-  --background-color: rgba(0, 0, 0, 0.6);
-  --text-color: #ffffff;
-  --button-default-color: #e77552;
-  --header-footer-bg-color: #33140a;
-  --notification-default-color: #e0cba8;
-  --button-hover-color: #d16a4b;
+  --background-color: rgba(0, 0, 0, 0.6); /* Background color with alpha transparency */
+  --text-color: #ffffff; /* Text color */
+  --button-default-color: #e77552; /* Default button color */
+  --header-footer-bg-color: #33140a; /* Background color for header and footer */
+  --notification-default-color: #e0cba8; /* Default color for notifications */
+  --button-hover-color: #d16a4b; /* Button color on hover */
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--background-color); /* Set background color using root variable */
+  color: var(--text-color); /* Set text color using root variable */
 }
 
 .container {
@@ -39,14 +39,14 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
-  background-color: var(--background-color);
+  z-index: 2; /* Ensure overlay appears above other content */
+  background-color: var(--background-color); /* Set background color using root variable */
 }
 
 .notification {
   position: absolute;
   top: 2%;
-  color: var(--text-color);
+  color: var(--text-color); /* Set text color using root variable */
   left: -50%;
   right: -50%;
   margin: 0 auto;
@@ -54,7 +54,7 @@ body {
   width: 300px;
   border-radius: 8px;
   padding: 20px;
-  background-color: var(--button-default-color);
+  background-color: var(--button-default-color); /* Set background color using root variable */
   opacity: 0;
   transition: opacity 0.3s ease-in-out; /* Add a transition effect for opacity */
 }
@@ -64,7 +64,7 @@ body {
 }
 
 .overlay > .content {
-  color: var(--text-color);
+  color: var(--text-color); /* Set text color using root variable */
   font-weight: bold;
 }
 
@@ -74,8 +74,8 @@ body {
   padding: 12px 20px;
   border-radius: 25px;
   border: none;
-  background-color: var(--button-default-color);
-  color: var(--text-color);
+  background-color: var(--button-default-color); /* Set background color using root variable */
+  color: var(--text-color); /* Set text color using root variable */
   cursor: pointer;
   font-size: 18px;
   font-weight: bold;
@@ -83,14 +83,14 @@ body {
 }
 
 .overlay > .content > .alert-btn:hover {
-  background-color: var(--button-hover-color);
-  border-color: var(--button-hover-color);
+  background-color: var(--button-hover-color); /* Change button color on hover using root variable */
+  border-color: var(--button-hover-color); /* Change button border color on hover using root variable */
 }
 
 .close-btn {
   background: none;
   border: none;
-  color: var(--text-color);
+  color: var(--text-color); /* Set text color using root variable */
   cursor: pointer;
   font-size: 15px;
   align-self: flex-start;
@@ -100,7 +100,7 @@ body {
 }
 
 .overlay > .content > .alert-btn:hover {
-  background-color: var(--button-hover-color);
+  background-color: var(--button-hover-color); /* Change button color on hover using root variable */
 }
 
 header.sticky {
@@ -109,7 +109,7 @@ header.sticky {
   min-height: 50px;
   padding: 20px 0;
   text-align: center;
-  background-color: var(--header-footer-bg-color);
+  background-color: var(--header-footer-bg-color); /* Set background color using root variable */
   z-index: 5;
   width: 100%;
 }
@@ -133,10 +133,10 @@ footer.sticky {
   min-height: 50px;
   padding: 20px 0;
   text-align: center;
-  background-color: var(--header-footer-bg-color);
+  background-color: var(--header-footer-bg-color); /* Set background color using root variable */
   z-index: 5;
   width: 100%;
-  color: var(--text-color);
+  color: var(--text-color); /* Set text color using root variable */
 }
 
 /* Media Queries */
