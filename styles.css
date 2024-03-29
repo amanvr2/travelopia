@@ -42,6 +42,27 @@ body {
   background-color: var(--background-color);
 }
 
+
+.notification {
+  position: absolute;
+  top: 2%;
+  color: var(--text-color);
+  left: -50%;
+  right: -50%;
+  margin: 0 auto;
+  z-index: 100;
+  width: 300px;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: var(--button-default-color);
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; /* Add a transition effect for opacity */
+}
+
+.notification.show {
+  opacity: 1; /* Show the notification */
+}
+
 .overlay > .content {
   color: var(--text-color);
   font-weight: bold;
@@ -61,42 +82,22 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.notification {
-  position: absolute;
-  top: 0;
-  color: #000;
-  left: -50%;
-  right: -50%;
-  margin: 0 auto;
-  height: 30px;
-  z-index: 100;
-  width: 300px;
-  border-radius: 8px;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: var(--color-desert-sand);
-}
-.close-btn {
-  background: none;
-  border: none;
-  color: var(--text-color);
-  cursor: pointer;
-  font-size: 20px;
-  align-self: flex-start;
-  top: 5px;
-  right: 0;
-  position: inherit;
+
+.overlay > .content > .alert-btn:hover {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
 }
 
 .close-btn {
   background: none;
   border: none;
-  color: var(--button-default-color);
+  color: var(--text-color);
   cursor: pointer;
-  font-size: 20px;
-}
-.close-btn:hover {
-  color: var(--button-hover-color);
+  font-size: 15px;
+  align-self: flex-start;
+  top: 5px;
+  right: 0;
+  position: inherit;
 }
 
 .overlay > .content > .alert-btn:hover {
@@ -157,5 +158,9 @@ footer.sticky {
 @media screen and (max-width: 480px) {
   .overlay > .content {
     font-size: 14px;
+  }
+
+  .notification{
+    top: 5px;
   }
 }
