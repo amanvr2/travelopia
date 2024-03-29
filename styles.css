@@ -4,13 +4,14 @@
   --text-color: #ffffff; /* Text color */
   --button-default-color: #e77552; /* Default button color */
   --button-hover-color: #d16a4b; /* Button color on hover */
+  --header-color: #ffffff; 
+  --footer-color: #263445;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color); /* Set background color using root variable */
   color: var(--text-color); /* Set text color using root variable */
 }
 
@@ -105,9 +106,9 @@ header.sticky {
   position: fixed;
   top: 0;
   min-height: 50px;
-  padding: 20px 0;
+  padding: 8px 0;
   text-align: center;
-  background-color: white; /* Set background color using root variable */
+  background-color: var(--header-color); /* Set background color using root variable */
   z-index: 5;
   width: 100%;
 }
@@ -119,7 +120,7 @@ header.sticky {
 }
 
 .header-img{
-  width: 100px;
+  width: 70px;
 }
 
 .header-img>img{
@@ -139,7 +140,7 @@ footer.sticky {
   min-height: 50px;
   padding: 20px 0;
   text-align: center;
-  background-color: #263445; /* Set background color using root variable */
+  background-color: var(--footer-color); /* Set background color using root variable */
   z-index: 5;
   width: 100%;
   color: var(--text-color); /* Set text color using root variable */
@@ -170,6 +171,6 @@ footer.sticky {
   }
 
   .header-img{
-    width: 85px;
+    width: 65px;
   }
 }
