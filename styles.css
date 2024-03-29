@@ -1,25 +1,32 @@
+/* root variables */
 :root {
   --background-color: rgba(0, 0, 0, 0.6);
   --text-color: #ffffff;
   --button-default-color: #e77552;
+  --notification-default-color: #e0cba8;
   --button-hover-color: #d16a4b;
+  --color-desert-sand: #e0cba8;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Happy Monkey', system-ui;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .container {
   position: relative;
   height: 100vh;
   width: 100vw;
+  overflow-y: auto;
 }
 
 .container > img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
@@ -38,7 +45,7 @@ body {
 
 .notification {
   position: absolute;
-  top: 10%;
+  top: 5%;
   color: var(--text-color);
   left: -50%;
   right: -50%;
@@ -66,19 +73,90 @@ body {
   min-width: 150px;
   padding: 12px 20px;
   border-radius: 25px;
-  border: 2px solid var(--button-default-color);
+  border: none;
   background-color: var(--button-default-color);
   color: var(--text-color);
   cursor: pointer;
   font-size: 18px;
-  font-family: inherit;
   font-weight: bold;
-
-  transition: background-color 0.5s ease, color 0.5s ease,
-    border-color 0.5s ease;
+  transition: background-color 0.5s ease;
 }
+
 
 .overlay > .content > .alert-btn:hover {
   background-color: var(--button-hover-color);
   border-color: var(--button-hover-color);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 15px;
+  align-self: flex-start;
+  top: 5px;
+  right: 0;
+  position: inherit;
+}
+
+.overlay > .content > .alert-btn:hover {
+  background-color: var(--button-hover-color);
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  min-height: 50px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #33140a;
+  z-index: 5;
+  width: 100%;
+}
+
+.header-content {
+  margin: 0 auto;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-corner {
+  font-size: 20px;
+  margin: 0;
+}
+
+footer.sticky {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--background-color);
+  padding: 10px 0;
+  text-align: center;
+  z-index: 5;
+  width: 100%;
+  height: 50px;
+  color: var(--text-color);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .header-content {
+    padding: 10px;
+  }
+
+  .header-corner {
+    font-size: 16px;
+  }
+
+  .overlay > .content > .alert-btn {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .overlay > .content {
+    font-size: 14px;
+  }
 }
