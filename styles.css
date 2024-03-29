@@ -3,7 +3,6 @@
   --background-color: rgba(0, 0, 0, 0.6); /* Background color with alpha transparency */
   --text-color: #ffffff; /* Text color */
   --button-default-color: #e77552; /* Default button color */
-  --header-footer-bg-color: #33140a; /* Background color for header and footer */
   --button-hover-color: #d16a4b; /* Button color on hover */
 }
 
@@ -68,7 +67,7 @@ body {
 }
 
 .overlay > .content > .alert-btn {
-  min-height: 50px;
+  min-height: 30px;
   min-width: 150px;
   padding: 12px 20px;
   border-radius: 25px;
@@ -108,7 +107,7 @@ header.sticky {
   min-height: 50px;
   padding: 20px 0;
   text-align: center;
-  background-color: var(--header-footer-bg-color); /* Set background color using root variable */
+  background-color: white; /* Set background color using root variable */
   z-index: 5;
   width: 100%;
 }
@@ -116,14 +115,22 @@ header.sticky {
 .header-content {
   margin: 0 auto;
   display: flex;
-  padding: 20px;
-  justify-content: space-between;
   align-items: center;
 }
 
+.header-img{
+  width: 100px;
+}
+
+.header-img>img{
+  width: 100%;
+}
+
 .header-corner {
-  font-size: 20px;
+  font-size: 25px;
   margin: 0;
+  color: #263445;
+  font-weight: 700;
 }
 
 footer.sticky {
@@ -132,7 +139,7 @@ footer.sticky {
   min-height: 50px;
   padding: 20px 0;
   text-align: center;
-  background-color: var(--header-footer-bg-color); /* Set background color using root variable */
+  background-color: #263445; /* Set background color using root variable */
   z-index: 5;
   width: 100%;
   color: var(--text-color); /* Set text color using root variable */
@@ -141,7 +148,7 @@ footer.sticky {
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .header-content {
-    padding: 10px;
+    padding: 5px;
   }
 
   .header-corner {
@@ -160,5 +167,9 @@ footer.sticky {
 
   .notification {
     top: 5px;
+  }
+
+  .header-img{
+    width: 85px;
   }
 }
