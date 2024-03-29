@@ -45,7 +45,7 @@ body {
 
 .notification {
   position: absolute;
-  top: 5%;
+  top: 2%;
   color: var(--text-color);
   left: -50%;
   right: -50%;
@@ -158,5 +158,9 @@ footer.sticky {
 @media screen and (max-width: 480px) {
   .overlay > .content {
     font-size: 14px;
+  }
+
+  .notification{
+    top: 5px;
   }
 }
